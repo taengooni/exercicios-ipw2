@@ -36,10 +36,10 @@ a:hover {
 img {
     max-width: 100%;
     height: auto;
-    display: block; /* Garantir que a imagem ocupe seu próprio espaço */
+    display: block; 
 }
 
-/* Desktop view (telas maiores que 768px) */
+
 @media (min-width: 769px) {
     .container {
         display: flex;
@@ -66,10 +66,10 @@ img {
     }
 }
 
-/* Mobile view (telas menores ou iguais a 768px) */
+
 @media (max-width: 768px) {
     .container {
-        flex-direction: column; /* Colocar em coluna para melhor visualização em mobile */
+        flex-direction: column; 
         padding: 0 10px;
     }
 
