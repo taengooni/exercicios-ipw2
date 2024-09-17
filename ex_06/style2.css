@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+#palavra {
+    margin-bottom: 20px;
+    font-size: 30px;
+    letter-spacing: 10px;
+}
+
+button {
+    margin: 5px;
+    padding: 10px;
+    font-size: 18px;
+}
+
+canvas {
+    border: 1px solid #000;
+    margin-top: 20px;
+}
