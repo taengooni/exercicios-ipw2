@@ -21,7 +21,7 @@ async function addExpense() {
         alert("Despesa adicionada com sucesso!");
         loadExpenses(); 
     } catch (error) {
-        console.error("Erro ao adicionar despesa:", error); // Mover para dentro do catch
+        console.error("Erro ao adicionar despesa:", error); 
     }
 }
 
@@ -93,5 +93,4 @@ async function deleteExpense(id) {
     }
 }
 
-// Carregar despesas ao abrir a página
 window.onload = loadExpenses;
