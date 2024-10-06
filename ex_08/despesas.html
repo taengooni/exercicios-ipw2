@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD de despesas</title>
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parse/3.4.3/parse.min.js"></script>
+    <script src="crud.js"></script>
+
+    <h1>CRUD de Despesas</h1>
+
+    
+    <div>
+        <input type="text" id="descricao" placeholder="Descrição da Despesa">
+        <input type="number" id="valor" placeholder="Valor da Despesa">
+        <button onclick="addExpense()">Adicionar Despesa</button>
+    </div>
+
+    <table border="1" cellpadding="5" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Descrição</th>
+                <th>Valor</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody id="despesasTable">
+          
+        </tbody>
+    </table>
+
+    <div id="totalDespesas">Total: R$ 0,00</div>
+</body>
+</html>
