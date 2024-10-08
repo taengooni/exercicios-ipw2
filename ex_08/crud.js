@@ -30,7 +30,7 @@ async function loadExpenses(filter = "") {
     const query = new Parse.Query(Despesa);
     
     if (filter) {
-        query.matches("descricao", filter); // Filtro por descrição
+        query.matches("descricao", filter); 
     }
 
     try {
@@ -59,11 +59,6 @@ async function loadExpenses(filter = "") {
     } catch (error) {
         console.error("Erro ao carregar despesas:", error);
     }
-}
-
-async function filterExpenses() {
-    const filterDescricao = document.getElementById('filterDescricao').value;
-    loadExpenses(filterDescricao); // Carrega despesas filtradas
 }
 
 async function updateExpense(id, valorAtual) {
