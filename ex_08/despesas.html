@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CRUD de despesas</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parse/3.4.3/parse.min.js"></script>
+    <script src="crud.js" defer></script>
 </head>
 <body>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/parse/3.4.3/parse.min.js"></script>
-    <script src="crud.js"></script>
-
     <h1>CRUD de Despesas</h1>
 
     <div>
@@ -16,7 +15,12 @@
         <input type="number" id="valor" placeholder="Valor da Despesa">
         <button onclick="addExpense()">Adicionar Despesa</button>
     </div>
-<br>
+    <br>
+    <div>
+        <input type="text" id="filterDescricao" placeholder="Filtrar Despesas">
+        <button onclick="filterExpenses()">Buscar</button>
+    </div>
+    <br>
     <table border="1" cellpadding="5" cellspacing="0">
         <thead>
             <tr>
@@ -29,7 +33,7 @@
           
         </tbody>
     </table>
-<br>
+    <br>
     <div id="totalDespesas">Total: R$ 0,00</div>
 </body>
 </html>

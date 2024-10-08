@@ -25,9 +25,13 @@ async function addExpense() {
     }
 }
 
-async function loadExpenses() {
+async function loadExpenses(filter = "") {
     const Despesa = Parse.Object.extend("Despesas");
     const query = new Parse.Query(Despesa);
+    
+    if (filter) {
+        query.matches("descricao", filter); // Filtro por descrição
+    }
 
     try {
         const results = await query.find();
@@ -55,6 +59,11 @@ async function loadExpenses() {
     } catch (error) {
         console.error("Erro ao carregar despesas:", error);
     }
+}
+
+async function filterExpenses() {
+    const filterDescricao = document.getElementById('filterDescricao').value;
+    loadExpenses(filterDescricao); // Carrega despesas filtradas
 }
 
 async function updateExpense(id, valorAtual) {
